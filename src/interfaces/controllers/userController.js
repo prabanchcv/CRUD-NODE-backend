@@ -29,7 +29,7 @@ const userLogin = async (req, res) => {
     const { userData, token } = response;
     res.json({ userData, token });
   } catch (error) {
-    throw new Error(error.message);
+   res.json(error.message)
   }
 };
 
